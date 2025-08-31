@@ -16,7 +16,7 @@ import java.util.List;
 public class DiffEngine {
 
     /**
-     * Represents a single change between two snapshots.
+     * Represents a single change between two snapshot.
      */
     public static class DiffResult {
         public enum ChangeType {
