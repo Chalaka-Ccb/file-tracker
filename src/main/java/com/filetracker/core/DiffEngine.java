@@ -36,7 +36,7 @@ public class DiffEngine {
             this.newFileMeta = newFileMeta;
         }
 
-        // Factory methods for creating different types of DiffResults
+        // Methods for creating different types of DiffResults
         public static DiffResult added(FileMetadata newFile) {
             return new DiffResult(newFile.getFilePath(), ChangeType.ADDED, null, newFile);
         }
@@ -77,7 +77,7 @@ public class DiffEngine {
     }
 
     /**
-     * Compares two snapshots and returns a list of differences.
+     * Contrasts two snapshots and returns a list of differences.
      * This is the core comparison algorithm using in-order traversal.
      *
      * @param snapshotA The older snapshot (can be null to simulate an empty snapshot).
