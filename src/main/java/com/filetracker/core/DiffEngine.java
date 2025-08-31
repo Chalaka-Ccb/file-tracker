@@ -28,7 +28,7 @@ public class DiffEngine {
         private final FileMetadata oldFileMeta; // Can be null for ADDED files
         private final FileMetadata newFileMeta; // Can be null for DELETED files
 
-        // Constructor is private. Use factory methods below.
+        // Constructor is private. 
         private DiffResult(String filePath, ChangeType changeType, FileMetadata oldFileMeta, FileMetadata newFileMeta) {
             this.filePath = filePath;
             this.changeType = changeType;
