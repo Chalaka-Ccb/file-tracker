@@ -11,7 +11,7 @@ import java.util.List;
  * -----------
  * Responsible for comparing two snapshots and identifying differences.
  * It uses a simultaneous in-order traversal algorithm to compare the two BSTs,
- * efficiently categorizing files as Added, Deleted, or Updated.
+ * efficiently categorizing files as added, deleted, or updated.
  */
 public class DiffEngine {
 
