@@ -10,8 +10,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import static jdk.internal.jshell.tool.Selector.FormatAction.ADDED;
-import static sun.font.TextLineComponent.UNCHANGED;
+
 
 /**
  * Compression
