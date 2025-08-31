@@ -8,24 +8,10 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * FileUtils
- * ----------
- * Provides utility methods for working with files and directories.
- * Core functionality includes recursively traversing a directory tree
- * to collect file metadata.
- * This implements a Depth-First Search (DFS) algorithm.
- */
+
 public class FileUtils {
 
-    /**
-     * Scans a given directory path recursively and collects metadata for all files.
-     *
-     * @param directoryPath The path of the directory to scan.
-     * @param baseDir The base directory path for calculating relative paths.
-     * @return A List of FileMetadata objects for every file found.
-     * @throws IOException If an I/O error occurs during traversal.
-     */
+
     public static List<FileMetadata> scanDirectory(String directoryPath, Path baseDir) throws IOException {
         List<FileMetadata> fileList = new ArrayList<>();
         Path startPath = Paths.get(directoryPath);
@@ -67,14 +53,7 @@ public class FileUtils {
         return fileList;
     }
 
-    /**
-     * A simpler method to get a list of all file paths in a directory (without metadata).
-     * This can be useful for debugging or other future functionalities.
-     *
-     * @param directoryPath The path to the directory.
-     * @return A list of file paths as strings.
-     * @throws IOException If an I/O error occurs.
-     */
+
     public static List<String> listAllFiles(String directoryPath) throws IOException {
         List<String> paths = new ArrayList<>();
         Path startPath = Paths.get(directoryPath);

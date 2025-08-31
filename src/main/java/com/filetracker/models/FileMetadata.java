@@ -9,17 +9,7 @@ import java.time.Instant;
 import java.util.HexFormat;
 import java.io.Serializable;
 
-/**
- * FileMetadata
- * ----------------------
- * This class represents the metadata of a single file in a snapshot.
- * It stores:
- *  - file path (relative to the snapshotted directory) - used as BST key
- *  - absolute file path - used for restore operations
- *  - file size (in bytes)
- *  - last modified timestamp
- *  - file hash (SHA-256) to detect content changes
- */
+
 public class FileMetadata implements Serializable {
     private static final long serialVersionUID = 1L;
     private String filePath;        // Relative path (used as key in BST)
@@ -28,15 +18,7 @@ public class FileMetadata implements Serializable {
     private long lastModified;      // Last modified time in milliseconds since epoch
     private String fileHash;        // SHA-256 hash of the file contents
 
-    /**
-     * Constructor for FileMetadata.
-     * Extracts size, lastModified, and hash from a given file path.
-     * Calculates the relative path based on the provided base directory.
-     *
-     * @param path Path object of the file
-     * @param baseDir Base directory path for calculating relative path
-     * @throws IOException if file cannot be read
-     */
+
     public FileMetadata(Path path, Path baseDir) throws IOException {
         this.absolutePath = path.toString();
         this.filePath = baseDir.relativize(path).toString(); // Calculate relative path
@@ -45,14 +27,7 @@ public class FileMetadata implements Serializable {
         this.fileHash = calculateFileHash(path);
     }
 
-    /**
-     * Calculates SHA-256 hash of a file.
-     * Used to detect if file content has changed.
-     *
-     * @param path Path to the file
-     * @return Hexadecimal string of hash
-     * @throws IOException if file cannot be read
-     */
+
     private String calculateFileHash(Path path) throws IOException {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
