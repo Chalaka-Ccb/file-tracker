@@ -110,7 +110,7 @@ public class DiffEngine {
                 differences.add(DiffResult.deleted(fileA));
                 i++;
             } else if (comp > 0) {
-                // File exists only in snapshot B -> it was added
+                // File exists only in snapshot B -> it was added.
                 differences.add(DiffResult.added(fileB));
                 j++;
             } else {
