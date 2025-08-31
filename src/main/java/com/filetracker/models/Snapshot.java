@@ -3,6 +3,7 @@ package com.filetracker.models;
 import com.filetracker.core.BST;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.io.Serializable;
 
 /**
  * Snapshot
@@ -13,7 +14,8 @@ import java.time.format.DateTimeFormatter;
  *  - timestamp of snapshot creation
  *  - a BST containing FileMetadata objects
  */
-public class Snapshot {
+public class Snapshot implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int snapshotId;          // Unique ID for snapshot
     private LocalDateTime timestamp; // Time when snapshot was taken
     private BST<FileMetadata> fileTree; // BST holding files of this snapshot
@@ -33,6 +35,7 @@ public class Snapshot {
 
     /**
      * Insert a file's metadata into this snapshot.
+     * Uses the file's relative path as the key in the BST.
      *
      * @param fileMetadata metadata of a file
      */
