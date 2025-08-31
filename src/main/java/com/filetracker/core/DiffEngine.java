@@ -77,7 +77,7 @@ public class DiffEngine {
     }
 
     /**
-     * Compares two snapshots and returns a list of differences.
+     * Contrasts two snapshots and returns a list of differences.
      * This is the core comparison algorithm using in-order traversal.
      *
      * @param snapshotA The older snapshot (can be null to simulate an empty snapshot).
