@@ -63,50 +63,11 @@ The tool focuses on **efficiency** by using core data structures to organize fil
    Error: Snapshot ID 10 not found
     ```
 
-Got it 👍
-I’ll continue from **Outputs** onward and make sure everything is included in clean Markdown.
-Here’s the missing part, starting from **Output Requirements**:
-
-````markdown
----
-
-### 🔹 Output Requirements
-
-1. **Snapshot Confirmation**
-   ```text
-   Snapshot #5 created at 2025-09-01 10:30 AM | Files: 214
-````
-
-2. **Diff Report**
-
-   ```text
-   Snapshot 4 → Snapshot 5
-   Added:   file3.txt
-   Updated: report.docx
-   Deleted: old_notes.pdf
-   ```
-
-3. **History List**
-
-   ```text
-   [1] 2025-08-01 12:00PM → 120 files
-   [2] 2025-08-10 02:15PM → 123 files
-   [3] 2025-08-15 06:45PM → 126 files
-   ```
-
-4. **Restore**
-
-   ```text
-   Directory restored to Snapshot #3 (2025-08-15 06:45PM)
-   ```
-
-5. **Error Handling**
-
-   ```text
-   Error: Snapshot ID 10 not found
-   ```
 
 ---
+
+
+
 
 ##  Data Structures Used and Justification
 
@@ -121,8 +82,6 @@ Here’s the missing part, starting from **Output Requirements**:
 **Why this combination?**
 The **Linked List** efficiently models the progression of time, while the **BST** ensures that file metadata within each snapshot is stored in an ordered structure.
 This allows quick lookup, traversal, and comparison of snapshots — the core functionality of the tool
-
-
 
 ---
 
