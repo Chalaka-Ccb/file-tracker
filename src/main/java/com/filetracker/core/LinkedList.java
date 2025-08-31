@@ -11,11 +11,7 @@ import com.filetracker.models.Snapshot;
  */
 public class LinkedList {
 
-    /**
-     * Node
-     * -----
-     * Private inner class that represents a single node in the Linked List.
-     */
+   
     private class Node {
         Snapshot data; // The Snapshot object stored in this node
         Node next;     // Reference to the next node in the list
@@ -60,14 +56,7 @@ public class LinkedList {
         size++;
     }
 
-    /**
-     * Returns the Snapshot at the specified position in the list.
-     * This operation is O(n) linear time.
-     *
-     * @param index The index of the Snapshot to retrieve (0-based).
-     * @return The Snapshot at the given index.
-     * @throws IndexOutOfBoundsException if the index is out of range.
-     */
+   
     public Snapshot get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
@@ -112,7 +101,7 @@ public class LinkedList {
      * This is a helper method for the 'diff latest' command.
      * This operation is O(n) linear time.
      *
-     * @return The second-last Snapshot, or null if the list has less than 2 items.
+     
      */
     public Snapshot getSecondLast() {
         if (size < 2) {
