@@ -34,9 +34,7 @@ file-tracker/
 │                   ├── DiffEngineTest.java
 │                   └── RestoreTest.java
 │
-├── data/                    # Snapshot storage (JSON, text, or serialized Java objects)
-│   ├── snapshots/
-│   └── metadata/
+├
 │
 ├── docs/                    # Proposal, design notes, algorithm analysis
 │   ├── design.md
@@ -45,3 +43,4 @@ file-tracker/
 └── logs/                    # Debugging logs
 └── tracker.log
 ```
+
