@@ -36,7 +36,7 @@ public class DiffEngine {
             this.newFileMeta = newFileMeta;
         }
 
-        // Factory methods for creating different types of DiffResults
+        // Methods for creating different types of DiffResults
         public static DiffResult added(FileMetadata newFile) {
             return new DiffResult(newFile.getFilePath(), ChangeType.ADDED, null, newFile);
         }
